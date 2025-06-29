@@ -1,0 +1,124 @@
+.contact {
+  background-color: var(--white);
+  padding-block: var(--section-padding);
+}
+
+.contact-content {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.contact-card {
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-1);
+  padding: 30px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 25px;
+  margin-block-end: 30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-label {
+  font-family: var(--ff-catamaran);
+  font-weight: var(--fw-800);
+  color: var(--rich-black-fogra-29-1);
+  font-size: var(--fs-6);
+  margin-block-end: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition-1);
+}
+
+.form-label:hover {
+  color: var(--coquelicot);
+}
+
+.form-label ion-icon {
+  font-size: 22px;
+  color: var(--coquelicot);
+  transition: var(--transition-1);
+}
+
+.form-label:hover ion-icon {
+  transform: scale(1.1);
+}
+
+.form-label .label-text {
+  flex-grow: 1;
+}
+
+.input-field {
+  background-color: var(--gainsboro);
+  padding: 12px 20px;
+  border-radius: var(--radius-8);
+  font-family: var(--ff-catamaran);
+  font-size: var(--fs-6);
+  color: var(--rich-black-fogra-29-1);
+  transition: var(--transition-1);
+  width: 100%;
+  border: none;
+}
+
+.input-field:focus {
+  outline: 2px solid var(--coquelicot);
+}
+
+.input-field::placeholder {
+  color: var(--sonic-silver);
+}
+
+select.input-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23767676' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 12px;
+}
+
+textarea.input-field {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.form-message {
+  background-color: var(--coquelicot_10);
+  padding: 20px;
+  border-radius: var(--radius-8);
+  text-align: center;
+  transition: var(--transition-1);
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-group:nth-child(4),
+  .form-group:nth-child(5),
+  .form-actions {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-content {
+    max-width: 900px;
+  }
+
+  .contact-card {
+    padding: 40px;
+  }
+}
